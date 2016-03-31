@@ -1,7 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
-var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./webpack-isomorphic-tools')).development();
 
 module.exports = function(opt) {
   return {
@@ -27,9 +25,6 @@ module.exports = function(opt) {
       loaders: [{
         test: /\.json$/,
         loader: 'json-loader',
-      }, {
-        test: webpackIsomorphicToolsPlugin.regular_expression('images'),
-        loader: 'url-loader?limit=10240'
       }, {
         test: /\.(eot|ttf|wav|mp3)$/,
         loader: 'file-loader',

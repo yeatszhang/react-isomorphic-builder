@@ -2,6 +2,7 @@
   "name": "react-isomorphic-builder",
   "version": "0.0.1",
   "description": "",
+  "main": "src/index.js",
   "scripts": {},
   "repository": "ssh://git@git.sankuai.com/cos/react-isomorphic-builder.git",
   "license": "MIT",

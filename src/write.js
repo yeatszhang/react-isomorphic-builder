@@ -13,7 +13,6 @@ module.exports = function (opt) {
     global.webpackIsomorphicTools.refresh();
   }
   var baseName = path.basename(opt.entry, '.js');
-  console.log(baseName);
   const assets = global.webpackIsomorphicTools.assets();
   var Component = require(opt.entry);
   var html = ReactDOMServer.renderToString(React.cloneElement(Component, {
@@ -21,7 +20,7 @@ module.exports = function (opt) {
       React.createElement('script', { src: assets.javascript.main || '' })
     ],
     stylesheets: [
-      //React.createElement('link', { href: assets.main.styles || '' })
+      React.createElement('link', { href: assets.styles.main || '' })
     ]
   }));
 

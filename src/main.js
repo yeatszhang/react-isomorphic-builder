@@ -21,7 +21,7 @@ global.__DEBUG__ = process.env.NODE_ENV === 'debug';
 
 const WebpackIsomorphicTools = require('webpack-isomorphic-tools');
 module.exports = function (opt) {
-  global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('./webpack-isomorphic-tools'))
+  global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('./webpack/webpack-isomorphic-tools'))
     .development(global.__DEBUG__)
     .server(opt.rootdir, function () {
       // 需要等待global.webpackIsomorphicTools 生成

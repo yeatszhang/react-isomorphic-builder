@@ -2,8 +2,8 @@
  * Created by yichizhang on 16/3/30.
  */
 var webpack = require('webpack');
-var webpackConfigDev = require('./webpack.config.dev.js');
-var webpackConfigPro = require('./webpack.config.pro.js');
+var webpackConfigDev = require('./webpack/webpack.config.dev.js');
+var webpackConfigPro = require('./webpack/webpack.config.pro.js');
 var html = require('./main.js');
 var npmlog = require('npmlog');
 

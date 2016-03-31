@@ -3,20 +3,25 @@
  */
 import React from 'react';
 import './test.css';
-import './test.js';
-class Component extends React.Component {
+
+class Page extends React.Component {
   render() {
     return (
-      <div>
-        hellow world
-        {this.props.scripts}
-      </div>
+      <html>
+      <head>
+        {this.props.stylesheets}
+      </head>
+      <body>
+      hellow world
+      {this.props.scripts}
+      </body>
+      </html>
     );
   }
 }
 
 if (typeof window === 'undefined') {
-  module.exports = <Component />;
+  module.exports = <Page />;
 } else {
-  React.render(<Component />, document.body);
+  React.render(<Page />, document.body);
 }

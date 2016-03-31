@@ -27,7 +27,10 @@ module.exports = function (opt) {
         loader: 'babel',
         exclude: /node_modules/,
         include: path.join(opt.rootdir, './src')
-      },, {
+      },{
+        test: webpackIsomorphicToolsPlugin.regular_expression('images'),
+        loader: 'url-loader?limit=10240'
+      }, {
         test: /\.module.css$/,
         loader: 'style!css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]'
       }, {

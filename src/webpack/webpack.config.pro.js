@@ -41,6 +41,9 @@ module.exports = function (opt) {
         exclude: /node_modules/,
         include: path.join(opt.rootdir, './src')
       }, {
+        test: webpackIsomorphicToolsPlugin.regular_expression('images'),
+        loader: 'url-loader?limit=10240'
+      }, {
         test: /\.module.css$/,
         loader: ExtractTextPlugin.extract('style', 'css?modules')
       }, {
