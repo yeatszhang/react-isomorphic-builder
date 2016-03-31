@@ -26,7 +26,7 @@ module.exports = function(opt) {
     ],
     module: {
       loaders: [{
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel',
         exclude: /node_modules/,
         include: path.join(opt.rootdir, './src'),
