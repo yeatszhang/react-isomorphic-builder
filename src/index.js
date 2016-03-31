@@ -28,12 +28,13 @@ module.exports = function(opt) {
       poll: true
 
     }, function(err, stats) {
+      if(err) throw err;
       npmlog.info(stats);
-      html({
-        entry: opt.entry,
-        rootdir: opt.rootdir,
-        outputdir: opt.outputdir
-      });
+      //html({
+      //  entry: opt.entry,
+      //  rootdir: opt.rootdir,
+      //  outputdir: opt.outputdir
+      //});
     });
   } else {
     // 线上build
@@ -44,6 +45,7 @@ module.exports = function(opt) {
       publicPath: opt.publicPath
     });
     webpack(config, function(err, stats) {
+      if (err) throw err;
       npmlog.info(stats);
       html({
         entry: opt.entry,

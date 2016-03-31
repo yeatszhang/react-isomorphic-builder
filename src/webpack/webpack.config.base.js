@@ -10,7 +10,10 @@ module.exports = function(opt) {
       publicPath: opt.publicPath
     },
     resolve: {
-      root: opt.rootdir,
+      root: [
+        opt.rootdir,
+        path.join(__dirname, '../../')
+      ],
       modulesDirectories: [
         'src',
         'node_modules'
@@ -28,8 +31,7 @@ module.exports = function(opt) {
         exclude: /node_modules/,
         include: path.join(opt.rootdir, './src'),
         query: {
-          "presets": ["react", "es2015", "stage-1"],
-          "plugins": ["transform-es3-member-expression-literals", "transform-es3-property-literals"]
+          "presets": ["react", "es2015", "stage-1"]
         }
       }, {
         test: /\.json$/,
