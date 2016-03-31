@@ -19,7 +19,6 @@
     "babel-plugin-transform-es3-property-literals": "^6.3.13",
     "babel-polyfill": "^6.3.14",
     "babel-register": "^6.3.13",
-    "clean-webpack-plugin": "^0.1.4",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
@@ -31,6 +30,7 @@
   },
   "dependencies": {
     "npmlog": "^2.0.0",
+    "rimraf": "^2.5.2",
     "webpack-isomorphic-tools": "^2.2.18",
     "webpack-merge": "^0.8.4"
   },

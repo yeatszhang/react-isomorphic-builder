@@ -6,6 +6,7 @@ var webpackConfigDev = require('./webpack/webpack.config.dev.js');
 var webpackConfigPro = require('./webpack/webpack.config.pro.js');
 var html = require('./main.js');
 var npmlog = require('npmlog');
+var rimraf = require('rimraf');
 
 /**
  *
@@ -37,6 +38,7 @@ module.exports = function(opt) {
     });
   } else {
     // 线上build
+    rimraf.sync(opt.outputdir);
     var config = webpackConfigPro({
       rootdir: opt.rootdir,
       outputdir: opt.outputdir,

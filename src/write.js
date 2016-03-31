@@ -28,6 +28,7 @@ module.exports = function (opt) {
   if (!fs.existsSync(opt.outputdir)) {
     fs.mkdirSync(opt.outputdir);
   }
+
   fs.writeFile(outPath, html, function (err) {
     if (err) {
       throw err;

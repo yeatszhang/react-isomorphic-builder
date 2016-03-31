@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var CleanPlugin = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin');
 var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./webpack-isomorphic-tools'));
@@ -15,7 +14,6 @@ module.exports = function (opt) {
     },
     devtool: 'source-map',
     plugins: [
-      new CleanPlugin([opt.outputdir]),
       new ExtractTextPlugin('[name]-[contenthash].css', { allChunks: true }),
       new webpack.DefinePlugin({
         __DEBUG__: false,
