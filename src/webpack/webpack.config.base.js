@@ -23,6 +23,15 @@ module.exports = function(opt) {
     ],
     module: {
       loaders: [{
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        include: path.join(opt.rootdir, './src'),
+        query: {
+          "presets": ["react", "es2015", "stage-1"],
+          "plugins": ["transform-es3-member-expression-literals", "transform-es3-property-literals"]
+        }
+      }, {
         test: /\.json$/,
         loader: 'json-loader',
       }, {

@@ -2,7 +2,9 @@
  * Created by yichizhang on 12/3/15.
  * node 服务入口文件，只能使用node支持的es6语法
  */
-require('babel-register');
+require('babel-register')({
+  "presets": ["react", "es2015", "stage-1"]
+});
 require('babel-polyfill');
 
 const path = require('path');

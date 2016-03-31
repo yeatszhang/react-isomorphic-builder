@@ -1,1 +1,11 @@
-{"javascript":{"main":"public/index-2094e7c123c437b38cab.js"},"styles":{"main":"public/main-4eb9f8b0956638f2a89c102395c475ad.css"},"assets":{"./src/test.css":"// removed by extract-text-webpack-plugin"}}
+{
+  "javascript": {
+    "main": "public/index.js"
+  },
+  "styles": {},
+  "assets": {
+    "./src/test.css": {
+      "_style": "a {\n  fill: red;\n}"
+    }
+  }
+}
