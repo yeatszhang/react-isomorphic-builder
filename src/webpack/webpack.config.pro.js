@@ -39,7 +39,11 @@ module.exports = function (opt) {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
-        include: path.join(opt.rootdir, './src')
+        include: path.join(opt.rootdir, './src'),
+        query: {
+          "presets": ["react", "es2015", "stage-1"],
+          "plugins": ["transform-es3-member-expression-literals", "transform-es3-property-literals"]
+        }
       }, {
         test: webpackIsomorphicToolsPlugin.regular_expression('images'),
         loader: 'url-loader?limit=10240'
